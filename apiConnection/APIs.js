@@ -1,9 +1,9 @@
-const url = "http://localhost:4008/propietarios"
+const url = "http://localhost:4000/propietarios"
 
 export const getVet = async ()=>{
     try {
         const response = await fetch(url);
-        const data = response.json();
+        const data = await response.json();
         return data
     } catch (error) {
         console.log(error);
@@ -11,15 +11,16 @@ export const getVet = async ()=>{
 }
 
 export const agregarVet = async (propietario)=>{
+    console.log("loquesea");
     try{
-        fetch (url ,{
+        await fetch(url ,{
             method: 'POST',
             body: JSON.stringify(propietario),
             headers:{
                 'Content-Type': 'application/json'
             }
         });
-        window.location.href = "index.html"
+
     }
     catch(error){
         console.log(error);
