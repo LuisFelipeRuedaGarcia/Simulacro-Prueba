@@ -1,4 +1,4 @@
-import {getVet} from "../apiConnection/APIpropietario.js"
+import {getVet} from "../apiConnection/APIs.js"
 
 (function (){
     document.addEventListener('DOMContentLoaded' , showPets)
@@ -39,6 +39,5 @@ import {getVet} from "../apiConnection/APIpropietario.js"
             `
             cuerpo.appendChild(row);
         });
-        
     }
 })()

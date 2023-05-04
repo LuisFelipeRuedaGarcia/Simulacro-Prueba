@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,800;1,400&display=swap"
         rel="stylesheet">
-    <script src="js/index.js" type="module" defer></script>
+    <script src="js/nuevo.js" type="module" defer></script>
     <script src="js/app.js" type="module" defer></script>
 
     <!-- <script src="js/campers.js" defer></script>  -->
@@ -36,7 +36,7 @@
           <li class="nav-item  d-flex gap-3 " style="display:flex; align-items: center;">
             <i class="bi bi-journal-plus text-white"></i>
             <a class="nav-link texcolor3" type="submit" data-bs-toggle="modal"
-            data-bs-target="#registerCamper" href="#" style="cursor:pointer;">Create Camper</a>
+            data-bs-target="#registerCamper" href="#" style="cursor:pointer;">Añadir Mascota</a>
           </li>
          <!--  <div class="d-flex">
             <button class="btn btn-outline-warning headerr" type="submit" data-bs-toggle="modal"
@@ -91,89 +91,38 @@
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header color1">
-        <h1 class="modal-title fs-5 headerr" id="exampleModalLabel">Register New Camper</h1>
+        <h1 class="modal-title fs-5 headerr" id="exampleModalLabel">Registra la mascota</h1>
       </div>
       <div class="modal-body">
         <form id="formulario" class="row g-3"  method="POST">
           <div class="col-md-12">
             <label for="nombre" class="form-label headerr">Nombre</label>
-            <input type="text" class="form-control" id="nombre">
+            <input type="text" class="form-control" id="nombreMascota">
           </div> 
     
     
     
            <div class="col-md-6">
-            <label for="promedio" class="form-label headerr">Promedio</label>
-            <select class="form-select" id="promedio">
-              <option value="">Seleccione Promedio</option>
-              <option value="3.0">3.0</option>
-              <option value="3.1">3.1</option>
-              <option value="3.2">3.2</option>
-              <option value="3.3">3.3</option>
-              <option value="3.4">3.4</option>
-              <option value="3.5">3.5</option>
-              <option value="3.6">3.6</option>
-              <option value="3.7">3.7</option>
-              <option value="3.8">3.8</option>
-              <option value="3.9">3.9</option>
-              <option value="4.0">4.0</option>
-              <option value="4.1">4.1</option>
-              <option value="4.2">4.2</option>
-              <option value="4.3">4.3</option>
-              <option value="4.4">4.4</option>
-              <option value="4.5">4.5</option>
-              <option value="4.6">4.6</option>
-              <option value="4.7">4.7</option>
-              <option value="4.8">4.8</option>
-              <option value="4.9">4.9</option>
-              <option value="5.0">5.0</option>
+            <label for="promedio" class="form-label headerr">Tipo de Mascota</label>
+            <select class="form-select" id="tipoMascota">
+              <option value="">Seleccione Mascota</option>
+              <option value="gato">Gato</option>
+              <option value="perro">Perro</option>
+              <option value="caballo">Caballo</option>
+              <option value="hamster">Hamster</option>
             </select>
           </div>
           <div class="col-md-2">
             <label for="edad" class="form-label headerr">Edad</label>
-            <input type="number" class="form-control" id="edad">
-          </div>
-          <div class="col-md-4">
-            <label for="nivelIngles" class="form-label headerr">Nivel Ingles</label>
-            <select id="nivelIngles" class="form-select">
-              <option selected>Nivel Ingles</option>
-              <option value="beginner">Beginner</option>
-              <option value="middle">Middle</option>
-              <option value="advanced">Advanced</option>
-              <option></option>
-            </select>
+            <input type="number" class="form-control" id="edadMascota">
           </div>
           <div class="col-md-8">
-            <label for="especialidad" class="form-label headerr">Especialidad</label>
-            <select class="form-select" id="especialidad">
-              <option value="">Seleccione Especialidad</option>
-              <option value="frontEnd">Front-End</option>
-              <option value="backEnd">Back-End</option>
-              <option value="fullStack">Full-Stack</option>
-            </select>
+            <label for="nombre" class="form-label headerr">Propietario</label>
+            <input type="text" class="form-control" id="propietarioMascota">
           </div>
-    
-          <div class="col-md-4">
-            <label for="nivelCampus" class="form-label headerr">Nivel en Campus</label>
-            <select class="form-select" id="nivelCampus">
-              <option value="">Nivel Campus</option>
-              <option value="basico">Basico</option>
-              <option value="intermedio">Intermedio</option>
-              <option value="avanzado">Avanzado</option>
-            </select>
-          </div>
-          
           <div class="col-12">
-            <label for="expertoTecnologia" class="form-label headerr">Experto en tecnologia</label>
-            <select class="form-select" id="expertoTecnologia">
-              <option value="">Seleccione Experto Tecnologia</option>
-              <option value="html">Html</option>
-              <option value="javascript">JavaScript</option>
-              <option value="node">Node Js</option>
-              <option value="mongo">Mongo DB</option>
-              <option value="php">Php</option>
-              <option value="vue">Vue</option>
-              <option value="asp">ASP.NET</option>
+            <label for="expertoTecnologia" class="form-label headerr">Numero Propietario</label>
+            <input type="number" class="form-control" id="numeroMascota">
             </select>
           </div> 
           
@@ -195,8 +144,8 @@
       <div class="divcueta border-bottom ">
         <img src="imgs/logo/WhatsApp Image 2023-05-04 at 8.35.36 AM.jpeg" alt="" srcset="" class="cuenta2">
         <div class="ps-2">
-          <h5 class="texcolor3">Vermen Ayala</h5>
-          <h6 class="texcosize">Trainer</h6>
+          <h5 class="texcolor3">Vets & Pets</h5>
+          <h6 class="texcosize">Veterinaria</h6>
         </div>
       </div>
       <div class="align-items-center d-flex gap-3 margin-rigth">
