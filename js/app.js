@@ -8,12 +8,12 @@ import {getVet} from "../apiConnection/APIs.js"
         console.log(miniVet);
         const cuerpo = document.querySelector('tbody')
         miniVet.forEach( veterinarias => {
-            const {mascota , nombrePropietario , numeroPropietario} = veterinarias
+            const {id, mascota , nombrePropietario , numeroPropietario} = veterinarias
             const row = document.createElement('tr')
             row.innerHTML =  `
             
             <td>
-                ${mascota[0].id}
+                ${id}
             </td>
             <td>
                 <img src="${mascota[0].imagen}" alt="..." class="cuenta">

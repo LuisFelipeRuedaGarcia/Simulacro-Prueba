@@ -10,16 +10,28 @@ function agregarPropietario(e) {
     e.preventDefault();
     const nombre = document.querySelector('#nombreMascota').value;
     const tipo = document.querySelector('#tipoMascota').value;
-    const edad = document.querySelector('#edadMascota').value;
-    const propietario = document.querySelector('#propietarioMascota').value;
-    const numero = document.querySelector('#numeroMascota').value;
+    const /* edad */ años = document.querySelector('#edadMascota').value;
+    const /* propietario */ nombrePropietario = document.querySelector('#propietarioMascota').value;
+    const /* numero */ numeroPropietario = document.querySelector('#numeroMascota').value;
 
     const dueno = {
-        nombre,
+        /* nombre,
         tipo,
         edad,
         propietario,
-        numero
+        numero */
+
+        nombrePropietario,
+        numeroPropietario,
+        mascota: [
+          {
+            "imagen": "/imgs/animales/imagenPerro.jpg",
+            nombre,
+            tipo,
+            años,
+
+          }
+        ]
     }
 
     if (validate(dueno)) {
